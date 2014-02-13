@@ -65,7 +65,7 @@ class Common(Configuration):
         #   South and allauth
         'allauth',  # registration
         'allauth.account',  # registration
-        'allauth.socialaccount',  # registration
+        #'allauth.socialaccount',  # registration
     )
     ########## END APP CONFIGURATION
 
@@ -85,7 +85,7 @@ class Common(Configuration):
     DEBUG = values.BooleanValue(True)
 
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-debug
-    TEMPLATE_DEBUG = DEBUG
+    TEMPLATE_DEBUG = False
     ########## END DEBUG
 
     ########## SECRET CONFIGURATION
