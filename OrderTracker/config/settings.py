@@ -54,6 +54,7 @@ class Common(Configuration):
     LOCAL_APPS = (
         'users',  # custom users app
         # Your stuff: custom apps go here
+        'LiteratureOrders',
     )
 
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -102,7 +103,7 @@ class Common(Configuration):
     ########## END FIXTURE CONFIGURATION
 
     ########## EMAIL CONFIGURATION
-    EMAIL_BACKEND = values.Value('django.core.mail.backends.smtp.EmailBackend')
+    EMAIL_BACKEND = values.Value('django.core.mail.backends.console.EmailBackend')
     ########## END EMAIL CONFIGURATION
 
     ########## MANAGER CONFIGURATION
@@ -117,7 +118,7 @@ class Common(Configuration):
 
     ########## DATABASE CONFIGURATION
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
-    DATABASES = values.DatabaseURLValue('postgres://localhost/OrderTracker')
+    DATABASES = values.DatabaseURLValue('mysql://user:12345@127.0.0.1:3306/OrderTracker')
     ########## END DATABASE CONFIGURATION
 
     ########## CACHING
